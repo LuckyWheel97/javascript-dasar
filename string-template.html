@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Template</title>
+  </head>
+  <body>
+    <script>
+      // Kode : Mengambil Variable
+      const name = "Dwi Norkholifan";
+      const firstName = "Dwi";
+      const lastName = "Norkholifan";
+      const template = `Name : ${firstName} ${lastName}`;
+
+      console.info(template);
+
+      // Kode : Expression di String Tempplate
+      const nilai = "90";
+      const template2 = `Name : ${name}, Lulus : ${nilai > 70}`;
+
+      console.info(template2);
+
+      // Multiline string
+      let multilineString = `
+      Nama saya adalah dwi norkholifan
+      Hello World
+      hahahahaha
+      Test Ah`;
+
+      document.write("<pre>");
+      document.write(multilineString);
+      document.write("</pre>");
+    </script>
+  </body>
+</html>
