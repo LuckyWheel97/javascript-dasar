@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data Object</title>
+  </head>
+  <body>
+    <script>
+      // Kode : Membuat Object Kosong
+      const orang = {
+        nama: "Dwi Norkholifan",
+        alamat: "landak",
+        umur: "26",
+      };
+
+      // Kode : Ubah Property / Attribute\
+      //person["nama"] = "Dwi Norkholifan";
+      //person["alamat"] = "Landak";
+      //person["umur"] = 30;
+
+      // Akses Property Object
+      console.info(`Nama : ${orang.nama}`);
+      console.info(`Alamat : ${orang.alamat}`);
+      console.info(`Umur : ${orang.umur}`);
+
+      console.table(orang);
+
+      // Menghapus
+      delete person["umur"];
+      console.table(orang);
+    </script>
+  </body>
+</html>
