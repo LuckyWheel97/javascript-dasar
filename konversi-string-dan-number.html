@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konversi String Dan Number</title>
+  </head>
+  <body>
+    <script>
+      // Kode : Masalah Tanpa Konversi
+
+      const value1 = parseInt("1");
+      const value2 = 1;
+      const sum = value1 + value2;
+
+      document.writeln(`<p>${sum}</p>`);
+
+      document.writeln(`<p>${parseInt(1.1)}</p>`); //hasil 1
+      document.writeln(`<p>${parseFloat(1.1)}</p>`); //hasil 1.1
+      document.writeln(`<p>${Number(1.1)}</p>`); //hasil 1.1
+
+      const a = 1;
+      const b = 1;
+      const total = a.toString() + b.toString();
+
+      document.writeln(`<p>${total}</p>`);
+
+      //Nan (Not a Number)
+      document.writeln(`<p>${parseInt("salah")}</p>`);
+      document.writeln(`<p>${parseFloat("1.1text")}</p>`);
+
+      //Number() tidak akan mentolerir kesalahan pada data
+      document.writeln(`<p>${Number("1.1ups")}</p>`);
+      document.writeln(`<p>${Number("1x")}</p>`);
+      document.writeln(`<p>${Number("bukan number")}</p>`);
+
+      //Kode operasi pada nan
+      const first = Number("salah");
+      const totalNumber = first + 100;
+
+      document.writeln(`<p>${Number(totalNumber)}</p>`);
+      document.writeln(`<p>${isNaN(first)}</p>`);
+      document.writeln(`<p>${isNaN(100)}</p>`);
+    </script>
+  </body>
+</html>
