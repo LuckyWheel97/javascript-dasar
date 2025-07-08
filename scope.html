@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope</title>
+  </head>
+  <body>
+    <script>
+      //global scope
+      let counter = 0;
+
+      // global scope
+      function hitMe() {
+        // local scope hitMe
+        counter++;
+      }
+
+      // global scope
+      function other() {
+        // local scope another
+      }
+
+      hitMe();
+      hitMe();
+
+      console.info(counter); // Output: Counter: 2
+
+      function first() {
+        // local scope first
+        let firstVariable = "First";
+
+        // local scope Nested
+        function firstNested() {
+          console.info(firstVariable); // Output: First
+        }
+        firstNested();
+      }
+
+      function second() {
+        // local scope second
+        let secondVariable = "Second";
+        // console.info(firstVariable); // Output: ReferenceError: firstVariable is not defined
+      }
+
+      first();
+      second();
+
+      //global scope
+      // console.info(firstVariable); // Output: ReferenceError: firstVariable is not defined
+      // console.info(secondVariable); // Output: ReferenceError: secondVariable is not defined
+    </script>
+  </body>
+</html>
